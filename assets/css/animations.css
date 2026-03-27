@@ -1,0 +1,63 @@
+/* CSS Animations for subtle cinematic feel */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 1s ease forwards;
+}
+
+/* Image Reveal Clipper */
+.reveal-clipper {
+    position: relative;
+    overflow: hidden;
+}
+
+.reveal-clipper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+    transform-origin: right;
+}
+
+.reveal-clipper.revealed::after {
+    transform: scaleX(0);
+}
+
+/* Glassmorphism utility */
+.glass-effect {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--border-color);
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Cursor (Optional but cinematic) */
+.custom-cursor {
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--text-primary);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.1s ease;
+    transform: translate(-50%, -50%);
+}

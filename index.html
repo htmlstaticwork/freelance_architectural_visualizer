@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArchViz — Photoreal Architectural Visualization & 3D Walkthroughs</title>
+    <meta name="description" content="Cinematic architectural visualization studio focusing on high-end photoreal renders, interiors, and walk-through animations.">
+    
+    <!-- CSS References -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap-grid.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- JS References -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-container">
+                <a href="index.html" class="nav-logo"><i class="bi bi-box-seam"></i> ARCHVIZ</a>
+                
+                <nav class="nav-links">
+                    <div class="dropdown">
+                        <a href="index.html" class="nav-link">Home <i class="bi bi-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html" class="dropdown-item">Hero Video</a></li>
+                            <li><a href="home-2.html" class="dropdown-item">Clean Minimal</a></li>
+                        </ul>
+                    </div>
+                    <a href="portfolio.html" class="nav-link">Portfolio</a>
+                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a href="login.html" class="btn-secondary mobile-only mt-4">Login</a>
+                    <a href="signup.html" class="btn-primary mobile-only">Sign Up</a>
+                </nav>
+
+                <div class="nav-right">
+                    <button class="rtl-toggle" aria-label="Toggle RTL">RTL</button>
+                    <button class="theme-toggle" aria-label="Toggle Theme">
+                        <i class="bi bi-moon-stars"></i>
+                    </button>
+                    <a href="login.html" class="btn-secondary">Login</a>
+                    <a href="signup.html" class="btn-primary">Sign Up</a>
+                    <div class="mobile-toggle"><i class="bi bi-list"></i></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-video-bg">
+            <!-- Using high-res architectural image for photoreal feel -->
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop" alt="Architectural Render" class="hero-img">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-subtitle reveal-text">Architectural Visualization Studio</span>
+                <h1 class="hero-title reveal-text">Cinematic Reality.</h1>
+                <p class="reveal-text">We craft photorealistic 3D renders and cinematic walkthrough animations that tell the story of your architecture before it's built.</p>
+                <div class="hero-btns reveal-text">
+                    <a href="portfolio.html" class="btn-primary">Explore Portfolio</a>
+                    <a href="contact.html" class="btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Showcase (Portfolio Home) -->
+    <section class="portfolio-section" id="portfolio">
+        <div class="container-fluid">
+            <div class="section-scroll d-flex justify-content-between align-items-end mb-5">
+                <div>
+                    <span class="hero-subtitle">Selected Works</span>
+                    <h2 class="mb-0">Latest Projects</h2>
+                </div>
+                <a href="portfolio.html" class="nav-link">View All Portfolio <i class="bi bi-arrow-right"></i></a>
+            </div>
+
+            <div class="portfolio-grid">
+                <!-- Portfolio items with photoreal renders -->
+                <div class="portfolio-item img-reveal">
+                    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=2070&auto=format&fit=crop" class="portfolio-img" alt="Exterior visualization">
+                    <div class="portfolio-info">
+                        <h3>Oakwood Residence</h3>
+                        <p>Modern Residential Visualization</p>
+                    </div>
+                </div>
+                <div class="portfolio-item img-reveal">
+                    <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2071&auto=format&fit=crop" class="portfolio-img" alt="Urban masterplan">
+                    <div class="portfolio-info">
+                        <h3>Horizon Towers</h3>
+                        <p>Urban Masterplan Rendering</p>
+                    </div>
+                </div>
+                <div class="portfolio-item img-reveal">
+                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1974&auto=format&fit=crop" class="portfolio-img" alt="Interior visualization">
+                    <div class="portfolio-info">
+                        <h3>The Penthouse</h3>
+                        <p>High-end Interior Renderings</p>
+                    </div>
+                </div>
+                <div class="portfolio-item img-reveal">
+                    <img src="https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?q=80&w=2070&auto=format&fit=crop" class="portfolio-img" alt="Villa visualization">
+                    <div class="portfolio-info">
+                        <h3>Crystal Villa</h3>
+                        <p>Luxury Estate Visualization</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="services-overview bg-surface" style="background-color: var(--surface-color);">
+        <div class="container">
+            <div class="section-scroll text-center mb-5">
+                <span class="hero-subtitle">What we do</span>
+                <h2>Crafting Excellence</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4 section-scroll">
+                    <div class="service-card text-center p-4">
+                        <i class="bi bi-layers mb-4 d-block fs-1"></i>
+                        <h3>3D Rendering</h3>
+                        <p class="text-secondary">Photorealistic exterior and interior renders that capture every detail of light and material.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 section-scroll">
+                    <div class="service-card text-center p-4">
+                        <i class="bi bi-camera-reels mb-4 d-block fs-1"></i>
+                        <h3>Walkthroughs</h3>
+                        <p class="text-secondary">Cinematic video tours that let potential buyers experience space and mood dynamically.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 section-scroll">
+                    <div class="service-card text-center p-4">
+                        <i class="bi bi-building mb-4 d-block fs-1"></i>
+                        <h3>VR Experiences</h3>
+                        <p class="text-secondary">Immersive 360-degree virtual reality environments for interactive project exploration.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Process -->
+    <section class="section-scroll pb-5">
+        <div class="container">
+            <div class="text-center mb-5 pb-4">
+                <span class="hero-subtitle">The Workflow</span>
+                <h2 class="display-5 fw-bold">From Blueprint to Reality</h2>
+            </div>
+            <div class="row g-0 border-top mt-5">
+                <div class="col-md-3 border-end">
+                    <div class="p-5 text-center">
+                        <span class="display-6 fw-bold text-primary opacity-25 mb-4 d-block">01</span>
+                        <h4 class="mb-3">Concept</h4>
+                        <p class="small text-secondary">Gathering CAD files, materials, and lighting moodboards to align on the project vision.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 border-end">
+                    <div class="p-5 text-center">
+                        <span class="display-6 fw-bold text-primary opacity-25 mb-4 d-block">02</span>
+                        <h4 class="mb-3">Modeling</h4>
+                        <p class="small text-secondary">Creating high-fidelity 3D geometry and environments with millimeter precision.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 border-end">
+                    <div class="p-5 text-center">
+                        <span class="display-6 fw-bold text-primary opacity-25 mb-4 d-block">03</span>
+                        <h4 class="mb-3">Lighting</h4>
+                        <p class="small text-secondary">Simulating realistic solar trajectories and artificial lighting setup for cinematic mood.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="p-5 text-center">
+                        <span class="display-6 fw-bold text-primary opacity-25 mb-4 d-block">04</span>
+                        <h4 class="mb-3">Delivery</h4>
+                        <p class="small text-secondary">4K master renders and walkthrough exports ready for high-end marketing campaigns.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="section-scroll bg-surface py-5" style="border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+        <div class="container">
+            <div class="row align-items-center opacity-50">
+                <div class="col-6 col-md-2 text-center py-3"><h4 class="fw-bold tracking-widest">SKYLINE</h4></div>
+                <div class="col-6 col-md-2 text-center py-3"><h4 class="fw-bold tracking-widest">VERTEX</h4></div>
+                <div class="col-6 col-md-2 text-center py-3"><h4 class="fw-bold tracking-widest">MODERNA</h4></div>
+                <div class="col-6 col-md-2 text-center py-3"><h4 class="fw-bold tracking-widest">AURORA</h4></div>
+                <div class="col-6 col-md-2 text-center py-3"><h4 class="fw-bold tracking-widest">PRISM</h4></div>
+                <div class="col-6 col-md-2 text-center py-3"><h4 class="fw-bold tracking-widest">ZENITH</h4></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive FAQ -->
+    <section class="section-scroll py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center mb-5">
+                        <span class="hero-subtitle">Questions</span>
+                        <h2 class="display-6 fw-bold">Common Inquiries</h2>
+                    </div>
+                    
+                    <div class="faq-container mt-5">
+                        <div class="p-4 border mb-3 rounded-1" style="background-color: var(--surface-color);">
+                            <h5 class="mb-3">How long does a typical render take?</h5>
+                            <p class="text-secondary small mb-0">Initial previews are delivered in 3-5 days. Final 4K renders usually take 7-10 business days depending on complexity.</p>
+                        </div>
+                        <div class="p-4 border mb-3 rounded-1">
+                            <h5>What files do you need from my side?</h5>
+                            <p class="text-secondary small mb-0">We work best with .SKP, .FBX, or .RVV files. We also accept 2D PDF blueprints for full 3D modeling from scratch.</p>
+                        </div>
+                        <div class="p-4 border mb-3 rounded-1">
+                            <h5>Do you offer revisions?</h5>
+                            <p class="text-secondary small mb-0">Each project includes two rounds of minor revisions to ensure the lighting and materiality perfectly match your vision.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4 footer-col">
+                    <a href="index.html" class="nav-logo mb-4 d-block"><i class="bi bi-box-seam"></i> ARCHVIZ</a>
+                    <p class="text-secondary">A cinematic architectural visualization studio based on capturing light, mood, and architectural storytelling in its purest photorealistic form.</p>
+                    <div class="social-links mt-4 d-flex gap-3">
+                        <a href="#"><i class="bi bi-instagram fs-4"></i></a>
+                        <a href="#"><i class="bi bi-linkedin fs-4"></i></a>
+                        <a href="#"><i class="bi bi-vimeo fs-4"></i></a>
+                        <a href="#"><i class="bi bi-behance fs-4"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-2 footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Journal</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-lg-3 footer-col">
+                    <h4>Studio Services</h4>
+                    <ul>
+                        <li><a href="service-details.html">Exterior Renders</a></li>
+                        <li><a href="service-details.html">Interior Design Visuals</a></li>
+                        <li><a href="service-details.html">Cinematic Walkthroughs</a></li>
+                        <li><a href="service-details.html">VR Interactive Tours</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-5 col-lg-3 footer-col">
+                    <h4>Contact</h4>
+                    <p class="text-secondary mb-3">123 Render Street, <br>Visual District, NYC</p>
+                    <p><a href="mailto:hello@archviz.studio">hello@archviz.studio</a></p>
+                    <p><a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ARCHVIZ Portfolio. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#" class="me-4 text-secondary">Privacy Policy</a>
+                    <a href="#" class="text-secondary">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/theme-toggle.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+</body>
+</html>
