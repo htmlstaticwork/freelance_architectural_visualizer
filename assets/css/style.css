@@ -1,32 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 :root {
+    /* Refined color palette for a more premium look */
     --primary-color: #111111;
-    --accent-color: #D1D5DB;
-    --bg-color: #F9FAFB;
+    --accent-color: #334155;
+    --bg-color: #FBFCFE;
     --surface-color: #FFFFFF;
-    --text-primary: #111111;
-    --text-secondary: #6B7280;
-    --border-color: rgba(17, 17, 17, 0.1);
-    --glass-bg: rgba(255, 255, 255, 0.7);
-    --glass-blur: blur(10px);
+    --text-primary: #0F172A;
+    --text-secondary: #64748B;
+    --border-color: rgba(15, 23, 42, 0.06);
+    --glass-bg: rgba(255, 255, 255, 0.85);
+    --glass-blur: blur(20px);
+    --card-gradient: linear-gradient(135deg, rgba(15,23,42,0.02) 0%, rgba(15,23,42,0) 100%);
     
     --font-heading: 'Space Grotesk', sans-serif;
     --font-body: 'Inter', sans-serif;
     
-    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    --header-height: 80px;
+    --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    --header-height: 90px;
 }
 
 [data-theme="dark"] {
     --primary-color: #F9FAFB;
     --accent-color: #E5E7EB;
-    --bg-color: #020617;
-    --surface-color: #0B0F19;
+    --bg-color: #05101A;
+    --surface-color: #0A1828;
     --text-primary: #F9FAFB;
-    --text-secondary: #9CA3AF;
-    --border-color: rgba(249, 250, 251, 0.1);
-    --glass-bg: rgba(2, 6, 23, 0.7);
+    --text-secondary: #94A3B8;
+    --border-color: rgba(249, 250, 251, 0.08);
+    --glass-bg: rgba(5, 16, 26, 0.85);
+    --card-gradient: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 100%);
 }
 
 .text-center { text-align: center !important; }
@@ -528,6 +531,12 @@ section {
     color: #FFFFFF !important;
 }
 
+/* Hero Clean styling for Minimal layout */
+.hero-clean .hero-title {
+    color: var(--text-primary) !important;
+    text-shadow: none;
+}
+
 
 .hero-btns {
     display: flex;
@@ -594,20 +603,71 @@ section {
     transform: scale(1.05);
 }
 
+/* New Pillar Styles */
+.pillar-card {
+    background: var(--card-gradient);
+    border: 1px solid var(--border-color);
+    padding: 60px 45px;
+    border-radius: 2px;
+    transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.pillar-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 0;
+    background: var(--text-primary);
+    transition: var(--transition-smooth);
+}
+
+.pillar-card:hover {
+    transform: translateY(-15px);
+    border-color: var(--text-primary);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.05);
+}
+
+.pillar-card:hover::before {
+    height: 100%;
+}
+
+.pillar-number {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 2rem;
+    opacity: 0.1;
+    display: block;
+    font-family: var(--font-heading);
+}
+
+.pillar-card h4 {
+    letter-spacing: 0.1em;
+    font-size: 1.1rem;
+}
+
 .portfolio-info {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 30px;
-    background: linear-gradient(transparent, rgba(0,0,0,0.8));
-    color: #FFFFFF;
+    padding: 40px 30px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+    color: #FFFFFF !important;
     opacity: 0;
-    transition: var(--transition-smooth);
+    filter: blur(10px);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 2;
 }
 
 .portfolio-item:hover .portfolio-info {
     opacity: 1;
+    filter: blur(0);
 }
 
 /* Footer */
@@ -626,6 +686,21 @@ footer {
     margin-bottom: 0.8rem;
 }
 
+.footer-col a:not(.nav-logo) {
+    color: var(--text-secondary);
+    transition: var(--transition-smooth);
+    display: inline-block;
+}
+
+.footer-col a:not(.nav-logo):hover {
+    color: var(--text-primary);
+    transform: translateX(5px);
+}
+
+.footer-links a:hover {
+    color: var(--text-primary);
+}
+
 .footer-bottom {
     margin-top: 60px;
     padding-top: 20px;
@@ -634,6 +709,17 @@ footer {
     justify-content: space-between;
     font-size: 0.8rem;
     color: var(--text-secondary);
+}
+
+/* Showreel Section (NEW) */
+.showreel-section {
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    overflow: hidden;
+}
+
+.object-fit-cover {
+    object-fit: cover !important;
 }
 
 .social-links {
